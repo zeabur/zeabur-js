@@ -1,7 +1,7 @@
 {
   "name": "zeabur",
   "private": false,
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1",
   "main": "./dist/zeabur.cjs",
   "module": "./dist/zeabur.mjs",
   "exports": {
