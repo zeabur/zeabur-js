@@ -1,0 +1,52 @@
+{
+  "name": "zeabur",
+  "private": false,
+  "version": "0.0.1-alpha.1",
+  "main": "./dist/zeabur.cjs",
+  "module": "./dist/zeabur.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/zeabur.cjs",
+      "import": "./dist/zeabur.mjs",
+      "types": "./dist/zeabur.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "MichaelYuhe",
+  "license": "MIT",
+  "types": "./dist/zeabur.d.ts",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "rimraf dist && tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts",
+    "lint:scripts": "eslint . --ext .ts",
+    "lint:styles": "stylelint ./**/*.{css,scss}",
+    "format:scripts": "prettier . --write",
+    "format:styles": "stylelint ./**/*.{css,scss} --fix",
+    "format": "npm run format:scripts && npm run format:styles",
+    "prepare": "husky install && husky set .husky/pre-commit 'npx lint-staged' && git add .husky/pre-commit",
+    "uninstall-husky": "npm uninstall husky --no-save && git config --unset core.hooksPath && npx rimraf .husky"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^21.1.1",
+    "@types/node": "^20.4.9",
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
+    "dts-bundle-generator": "^8.0.1",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.1",
+    "rimraf": "^5.0.1",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-recommended": "^9.0.0",
+    "stylelint-prettier": "^3.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9"
+  }
+}
