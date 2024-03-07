@@ -11,6 +11,10 @@
       "types": "./dist/zeabur.d.ts"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeabur/zeabur-js.git"
+  },
   "files": [
     "dist"
   ],
