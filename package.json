@@ -2,13 +2,13 @@
   "name": "@zeabur/zeabur-js",
   "private": false,
   "version": "0.0.1",
-  "main": "./dist/zeabur.cjs",
-  "module": "./dist/zeabur.mjs",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "exports": {
     ".": {
-      "require": "./dist/zeabur.cjs",
-      "import": "./dist/zeabur.mjs",
-      "types": "./dist/zeabur.d.ts"
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
     }
   },
   "repository": {
@@ -20,7 +20,7 @@
   ],
   "author": "MichaelYuhe",
   "license": "MIT",
-  "types": "./dist/zeabur.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite --host",
     "build": "rimraf dist && tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts",
