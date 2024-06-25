@@ -7,7 +7,7 @@ Official JavaScript client for Zeabur.
 First, install the package:
 
 ```bash
-npm install zeabur
+npm install zeabur-js
 ```
 
 Then, you're able to import the library and initialize it with your API key:
